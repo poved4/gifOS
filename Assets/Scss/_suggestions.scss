@@ -1,0 +1,28 @@
+.suggestiions{
+    top: 15px;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    background: #E6E6E6;
+    box-sizing: border-box;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+    body.dark & {
+        background: #B4B4B4;
+        box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+    }
+
+    .option{
+        margin: 5px;
+        font-size: 16px;
+        color: #110038;
+        position: relative;
+        padding: 5px 5px 5px 15px;
+        border: 1px solid #110038;
+
+        @include bntHover();
+        body.dark & { border: 1px solid #110038; }
+    }
+}

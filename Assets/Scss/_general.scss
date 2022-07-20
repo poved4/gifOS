@@ -1,0 +1,13 @@
+/*Normalizacion*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+    transition-duration: .3s;
+    font-family: $font-family;
+}
+
+body{
+    background: $colorWhite;
+    &.dark{ background: $colorDark; }
+}

@@ -1,0 +1,26 @@
+@mixin bntHover {
+    
+    &:hover:after{
+        content: " ";
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        outline: none;
+        cursor: pointer;
+        position: absolute;
+        border: 1px dashed  #110038;
+    }
+
+    &:active:after{
+        content: " ";
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        outline: none;
+        cursor: pointer;
+        position: absolute;
+        border: 1px dashed  #110038;
+    }
+}

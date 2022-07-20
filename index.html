@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gif OS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="Assets/Scss/styles.css">
+        <link rel="shortcut icon" href="Assets/Images/WebIcon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- headerInfo-->
+        <header>
+            <div class="headerInfo"><p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p></div>
+        </header>
+
+        <!--NavBar-->
+        <nav class="cOptions">
+            <img src="Assets/Images/gifOF_logo.png" class="logo logoWhite" alt="logo Gif-OS">
+            <img src="Assets/Images/gifOF_logo_dark.png" class="logo logoDark" alt="logo Gif-OS">
+            <a href="Assets/Links/CreatedGif.html" class="create">Crear Guifos</a>
+            <span class="btnTheme">Elegir tema
+                <span class="btnThemeArrow" id="theme"><img src="Assets/Images/dropdown.svg" alt="Arrow"></span>
+                <span class="ThemeSquare" id="ThemeSquare">
+                    <span class="day" id="dayTheme"><ins>S</ins>ailor Day</span>
+                    <span class="night" id="nightTheme">Sailor Night</span>
+                </span>
+            </span>
+            <a class="cMyGifs" href="Assets/Links/CreatedGif.html"><ins>M</ins>is Guifos</a>
+            
+        </nav>
+
+        <!--Barra de busqueda-->
+        <div class="SearchBar">
+            <div class="SectionName"><p>Buscar</p></div>
+
+            <form id="searchForm">
+                <input type="search" class="searchTxt" id="searchInput" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                <button type="submit" class="searchBtn"><img src="Assets/Images/lupa.svg" alt="lupa">Buscar</button>
+            </form>
+
+            <div class="suggestiions" id="suggestiions">
+                <div class="option" onclick="search('Cats')">Cats</div>
+                <div class="option" onclick="search('Dogs')">Dogs</div>
+                <div class="option" onclick="search('Random')">Random</div>
+            </div>
+        </div>
+
+        <div class="searchs" id="searchs"></div>
+
+        <!-- InfoSection-->
+        <div class="titles"><p>Hoy te sugerimos:</p></div>
+    
+        <!-- gif tendencia-->
+        <div class="tendeciaGifs" id="tendeciaGifs"></div>
+    
+        <!--InfoSection-->
+        <div class="titles"><p  id="titleSearch">Tendencias:</p></div>
+
+        <!--Gif Results-->
+        <div id="results" class="results"></div>
+
+        <!--Scripts-->
+        <script src="Assets/js/search.js"></script>
+        <script src="Assets/js/ChangeTheme.js"></script>
+    </body>
+</html>
