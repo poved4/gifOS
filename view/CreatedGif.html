@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Gif OS</title>
-        <link rel="stylesheet" href="../Scss/CreateGif.css">
-        <link rel="shortcut icon" href="../Images/WebIcon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../styles/css/CreateGif.css">
+        <link rel="shortcut icon" href="../img/WebIcon.ico" type="image/x-icon">
     </head>
     <body>
 
@@ -15,15 +15,15 @@
         </header>
 
         <nav>
-            <a href="../../index.html"><img src="../Images/arrow.svg" alt="ArrowBack"></a>
-            <img src="../Images/gifOF_logo.png" alt="Logo" class="logo">
+            <a href="../index.html"><img src="../img/arrow.svg" alt="ArrowBack"></a>
+            <img src="../img/gifOF_logo.png" alt="Logo" class="logo">
         </nav>
 
         <div class="InfoCapture" id="InfoCapture">   
             <div class="info">
                 <p>Un Chequeo Antes de Empeza</p>
             </div>
-            <img src="../Images/windowImg.png" alt="windows">
+            <img src="../img/windowImg.png" alt="windows">
             <p>Aquí podrás crear tus propios guifos</p>
             <pre>
                 Crear tu <b>guifo</b> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
@@ -47,23 +47,23 @@
 
             <div class="info">
                 <p>Un Chequeo Antes de Empeza</p>
-                <img src="../Images/close.svg" alt="close" class="bntClose">
+                <img src="../img/close.svg" alt="close" class="bntClose">
             </div>
 
             <video class="gifDisplay" id="video">video stream not avaible.</video>
             <img class="gifDisplay" id="ShowGif" src="#" alt="GifCreate">
             <div class="uploading" id="uploading">
-                <img src="../Images/globe_img.png" alt="globe">
+                <img src="../img/globe_img.png" alt="globe">
                 <span>Estamos subiendo tu guifo…</span>
             </div>
            
             <div class="startClass" id="startClass">
-                <span id="startBtn"><img src="../Images/camera.svg" alt="camera"></span>
+                <span id="startBtn"><img src="../img/camera.svg" alt="camera"></span>
                 <p  onclick="startVideo()"> Capturar</p>
             </div>  
 
             <div class="stopClass" id="stopClass">
-                <span id="stopBtn"><img src="../Images/recording.svg" alt="camera"></span>
+                <span id="stopBtn"><img src="../img/recording.svg" alt="camera"></span>
                 <p onclick="stopVideo()">Listo</p>
             </div>
             
@@ -82,6 +82,6 @@
         <div class="misGifs" id="misGifs"></div>
         
         <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-        <script src="../Js/testCaptureVideo.js"></script>
+        <script src="../src/testCaptureVideo.js"></script>
     </body>
 </html>

@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="Assets/Scss/styles.css">
-        <link rel="shortcut icon" href="Assets/Images/WebIcon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles/css/styles.css">
+        <link rel="shortcut icon" href="img/WebIcon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
     </head>
 
@@ -18,17 +18,17 @@
 
         <!--NavBar-->
         <nav class="cOptions">
-            <img src="Assets/Images/gifOF_logo.png" class="logo logoWhite" alt="logo Gif-OS">
-            <img src="Assets/Images/gifOF_logo_dark.png" class="logo logoDark" alt="logo Gif-OS">
-            <a href="Assets/Links/CreatedGif.html" class="create">Crear Guifos</a>
+            <img src="img/gifOF_logo.png" class="logo logoWhite" alt="logo Gif-OS">
+            <img src="img/gifOF_logo_dark.png" class="logo logoDark" alt="logo Gif-OS">
+            <a href="view/CreatedGif.html" class="create">Crear Guifos</a>
             <span class="btnTheme">Elegir tema
-                <span class="btnThemeArrow" id="theme"><img src="Assets/Images/dropdown.svg" alt="Arrow"></span>
+                <span class="btnThemeArrow" id="theme"><img src="img/dropdown.svg" alt="Arrow"></span>
                 <span class="ThemeSquare" id="ThemeSquare">
                     <span class="day" id="dayTheme"><ins>S</ins>ailor Day</span>
                     <span class="night" id="nightTheme">Sailor Night</span>
                 </span>
             </span>
-            <a class="cMyGifs" href="Assets/Links/CreatedGif.html"><ins>M</ins>is Guifos</a>
+            <a class="cMyGifs" href="view/CreatedGif.html"><ins>M</ins>is Guifos</a>
             
         </nav>
 
@@ -38,7 +38,7 @@
 
             <form id="searchForm">
                 <input type="search" class="searchTxt" id="searchInput" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                <button type="submit" class="searchBtn"><img src="Assets/Images/lupa.svg" alt="lupa">Buscar</button>
+                <button type="submit" class="searchBtn"><img src="img/lupa.svg" alt="lupa">Buscar</button>
             </form>
 
             <div class="suggestiions" id="suggestiions">
@@ -63,7 +63,7 @@
         <div id="results" class="results"></div>
 
         <!--Scripts-->
-        <script src="./Assets/Js/search.js"></script>
-        <script src="./Assets/Js/ChangeTheme.js"></script>
+        <script src="./src/search.js"></script>
+        <script src="./src/ChangeTheme.js"></script>
     </body>
 </html>

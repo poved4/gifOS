@@ -103,7 +103,7 @@ function searchTendences() {
                 <div class="gifTendence">
                     <div class="infoGif">
                         <p>#${titleObj}</p>
-                        <img src="Assets/Images/buttonClose.svg" alt="close">
+                        <img src="img/buttonClose.svg" alt="close">
                     </div>
                     <div class="gif">
                         <img src = "${urlObj}" alt = "${titleObj}">
