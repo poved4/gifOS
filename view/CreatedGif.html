@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Gif OS</title>
-        <link rel="stylesheet" href="../styles/css/CreateGif.css">
-        <link rel="shortcut icon" href="../img/WebIcon.ico" type="image/x-icon">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <header>
-            <div class="headerInfo"> <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p></div>
-        </header>
+    <title>Gif OS</title>
+    <link rel="stylesheet" href="../styles/css/CreateGif.css">
+    <link rel="shortcut icon" href="../img/WebIcon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
 
-        <nav>
-            <a href="../index.html"><img src="../img/arrow.svg" alt="ArrowBack"></a>
-            <img src="../img/gifOF_logo.png" alt="Logo" class="logo">
-        </nav>
+<body>
 
-        <div class="InfoCapture" id="InfoCapture">   
-            <div class="info">
-                <p>Un Chequeo Antes de Empeza</p>
-            </div>
-            <img src="../img/windowImg.png" alt="windows">
-            <p>Aquí podrás crear tus propios guifos</p>
-            <pre>
+    <header>
+        <div class="headerInfo">
+            <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="../index.html"><img src="../img/arrow.svg" alt="ArrowBack"></a>
+        <img src="../img/gifOF_logo.png" alt="Logo" class="logo">
+    </nav>
+
+    <div class="InfoCapture" id="InfoCapture">
+        <div class="info">
+            <p>Un Chequeo Antes de Empeza</p>
+        </div>
+        <img src="../img/windowImg.png" alt="windows">
+        <p>Aquí podrás crear tus propios guifos</p>
+        <pre>
                 Crear tu <b>guifo</b> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
                 personalizados. Los pasos para crear tu guifo son:
                
@@ -39,49 +45,55 @@
                
                 ¿Quieres comenzar a crear tu <b>guifo</b> ahora?
             </pre>
-            <button class="cancel" onclick="InfoCaptureCancel()">Cancelar</button>
-            <button class="GoVideo" onclick="InfoCaptureGoVideo()">Comenzar</button>
+        <button class="cancel" onclick="InfoCaptureCancel()">Cancelar</button>
+        <button class="GoVideo" onclick="InfoCaptureGoVideo()">Comenzar</button>
+    </div>
+
+    <div class="capture" id="capture">
+
+        <div class="info">
+            <p>Un Chequeo Antes de Empeza</p>
+            <img src="../img/close.svg" alt="close" class="bntClose">
         </div>
 
-        <div class="capture" id="capture">
+        <video class="gifDisplay" id="video">video stream not avaible.</video>
+        <img class="gifDisplay" id="ShowGif" src="#" alt="GifCreate">
+        <div class="uploading" id="uploading">
+            <img src="../img/globe_img.png" alt="globe">
+            <span>Estamos subiendo tu guifo…</span>
+        </div>
 
-            <div class="info">
-                <p>Un Chequeo Antes de Empeza</p>
-                <img src="../img/close.svg" alt="close" class="bntClose">
-            </div>
+        <div class="startClass" id="startClass">
+            <span id="startBtn"><img src="../img/camera.svg" alt="camera"></span>
+            <p onclick="startVideo()"> Capturar</p>
+        </div>
 
-            <video class="gifDisplay" id="video">video stream not avaible.</video>
-            <img class="gifDisplay" id="ShowGif" src="#" alt="GifCreate">
-            <div class="uploading" id="uploading">
-                <img src="../img/globe_img.png" alt="globe">
-                <span>Estamos subiendo tu guifo…</span>
-            </div>
-           
-            <div class="startClass" id="startClass">
-                <span id="startBtn"><img src="../img/camera.svg" alt="camera"></span>
-                <p  onclick="startVideo()"> Capturar</p>
-            </div>  
+        <div class="stopClass" id="stopClass">
+            <span id="stopBtn"><img src="../img/recording.svg" alt="camera"></span>
+            <p onclick="stopVideo()">Listo</p>
+        </div>
 
-            <div class="stopClass" id="stopClass">
-                <span id="stopBtn"><img src="../img/recording.svg" alt="camera"></span>
-                <p onclick="stopVideo()">Listo</p>
-            </div>
-            
-            <div class="endClass" id="endClass">
-                <button class="repet" id="repet" onclick="repetVideo()">Repetir Captura</button>
-                <button class="upload" id="upload" onclick="uploadGif()">Subir Guifo</button>
-            </div>
+        <div class="endClass" id="endClass">
+            <button class="repet" id="repet" onclick="repetVideo()">Repetir Captura</button>
+            <button class="upload" id="upload" onclick="uploadGif()">Subir Guifo</button>
+        </div>
 
-            <button class="cancelBtn" id="cancelBtn">Cancelar</button>
+        <button class="cancelBtn" id="cancelBtn">Cancelar</button>
 
-            <div class="timer" id="timer">00:00:00:00</div>
+        <div class="timer" id="timer">00:00:00:00</div>
 
-        </div> 
+    </div>
 
-        <div class="titles" id="titles"><p>Mis guifos</p></div>
-        <div class="misGifs" id="misGifs"></div>
-        
-        <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-        <script src="../src/testCaptureVideo.js"></script>
-    </body>
+    <div class="titles" id="titles">
+        <p>Mis guifos</p>
+    </div>
+    <div class="misGifs" id="misGifs"></div>
+
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="../src/testCaptureVideo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
