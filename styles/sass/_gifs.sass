@@ -1,0 +1,27 @@
+@mixin gif
+    background: var(--gif-bg)
+    box-shadow: var(--gif-shadow)
+
+
+.trend-gif
+    @include gif()
+
+    figcaption
+        width:  calc(100% - 1rem)
+
+    button
+        left:   5%
+        bottom: 5%
+
+
+.results-gif
+    @include gif()
+
+    figcaption
+        bottom:     3%
+        width:      calc(100% - 1rem)
+        visibility: hidden
+
+    &:hover 
+        figcaption
+            visibility: visible

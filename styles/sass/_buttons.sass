@@ -1,0 +1,112 @@
+@mixin btn-hover($offset: 2px)
+
+    position:   relative
+    
+    &:hover:after, &:active:after
+      content:        ""
+      top:            $offset
+      left:           $offset
+      right:          $offset
+      bottom:         $offset
+      outline:        none
+      position:       absolute
+      border:         1px dashed var(--deep-violet)
+      pointer-events: none
+
+
+.btn-nav-my-gifs
+    color:      var(--btn-gifs-bg)
+
+    &:hover
+        border:   var(--btn-gifs-border)
+        padding:  (1rem * 0.25) (1rem * 0.6) (1rem * 0.25) (1rem * 0.2)
+
+    &:active
+        opacity:  50%
+        border:   none
+
+
+.btn-day
+    cursor:     pointer
+    background: var(--btn-day-bg) !important
+    border:     var(--btn-day-border) !important
+    box-shadow: var(--btn-day-shadow)
+
+
+.btn-night
+    cursor:     pointer
+    color:      var(--btn-night-color) !important
+    background: var(--btn-night-bg) !important
+    border:     var(--btn-night-border) !important
+    box-shadow: var(--btn-night-shadow)
+
+
+.btn-pink
+    color:      var(--btn-pink-color)
+    background: var(--btn-pink-bg)
+    box-shadow: var(--btn-pink-shadow)
+    border:     1px solid var(--deep-violet)
+
+    @include btn-hover()
+
+
+.btn-blue
+    background: var(--hyper-blue)
+    box-shadow: var(--btn-blue-shadow)
+    border:     1px solid var(--imperial-violet)
+
+    @include btn-hover()
+
+
+.btn-submit-search
+    background: var(--btn-submit-bg)
+    color:      var(--btn-submit-color)
+    border:     1px solid var(--classic-gray)
+    box-shadow: inset -1px -1px 0 0 var(--neutral-gray), inset 1px 1px 0 0 white
+
+    &:hover, &:active
+        color:      var(--deep-violet)
+        border:     1px solid var(--deep-violet)
+        box-shadow: inset -1px -1px 0 0 var(--ash-mauve), inset 1px 1px 0 0 white
+
+        body.dark-mode &
+            color:      white
+            box-shadow: inset -1px -1px 0 0 var(--mystic-violet), inset 1px 1px 0 0 white
+
+    &:hover
+        background: var(--sugar-petal)
+
+        body.dark-mode &
+            background: var(--neon-purple)
+
+    &:active
+        background: var(--velvet-rose)
+
+        body.dark-mode &
+            background: var(--electric-orchid)
+
+    @include btn-hover()
+
+.btn-white
+    color:      var(--deep-violet)
+    background: var(--cotton-blush)
+    border:     1px solid var(--deep-violet)
+    box-shadow: inset -1px -1px 0 0 var(--ash-mauve), inset 1px 1px 0 0 white
+
+    @include btn-hover()
+
+.btn-soft-pink
+    color:      var(--deep-violet)
+    background: var(--sugar-petal)
+    border:     1px solid var(--deep-violet)
+    box-shadow: inset -1px -1px 0 0 var(--ash-mauve), inset 1px 1px 0 0 white
+
+    @include btn-hover()
+
+.btn-red
+    color:      white
+    background: var(--coral-ember)
+    border:     1px solid var(--deep-violet)
+    box-shadow: inset -1px -1px 0 0 var(--garnet-red), inset 1px 1px 0 0 white
+    
+    @include btn-hover()
